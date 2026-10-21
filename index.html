@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuga do laboratorio</title>
+    <link rel="shortcut icon" href="https://i.postimg.cc/4dhf2XcR/favicon.png" type="image/png">
+    <style>
+    body{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    background-color:black;
+    color:gray;
+    }
+
+    #game-container{
+    max-width:600px;
+    margin:auto;
+    padding:20px;
+    border:2px solid white;
+    background-color:#222;
+    border-radius:10px;
+    }
+
+    img {
+    width:100%;
+    border-radius:10px;
+    }
+
+    .choice{
+        display:block;
+        margin:10px auto;
+        padding:10px;
+        width:80%;
+        font-size:18px;
+        cursor:pointer;
+        background-color:red;
+        color:white;
+        border:none;
+        border-radius:5px;
+    }
+    </style>
+</head>
+<body>
+<div id="game-container">
+    <h2 id="title">Fuga do laboratorio</h2>
+    <img id="scene-img" src="cena1.png" alt="cena do jogo">
+    <p id="story">Você acordou em lugar estranho e misterioso. o que você faz?</p>
+    <button class="choice" onclick="escolha('explorar')">explorar o local</button>
+    <button class="choice" onclick="escolha('esconder')">se esconder em lugar seguro</button>
+</div>
+
+<script>
+    function escolha(opcao){
+        let titulo = document.getElementById("title");
+        let imagem = document.getElementById("scene-img");
+        let historia = document.getElementById("story");
+        let botoes = document.querySelectorAll(".choice");
+
+        if(opcao === 'explorar') {
+            titulo.innerText = "descorbeta";
+            imagem.src = "cena1.1.png";
+            historia.innerText = "Você descobri que ali é um laboratório estranho e misterioso…O que você faz?";
+            botoes[0].innerText = "analisar a parede";
+            botoes[0].setAttribute = ("onclick", "escolha('analisar')");
+            botoes[1].innerText = "explorar mais o local";
+            botoes[1].setAttribute("onclick", "escolha('local')");
+        }
+        else if(opcao === 'esconder') {
+            titulo.innerText = "fuga";
+            imagem.src = "cena1.2.png";
+            historia.innerText = "os guardas te encontraram como você vai fugir?."
+            botoes[0].innerText = "saia correndo"
+            botoes[0].setAttribute = ("onclick", "escolha('correr')");
+            botoes[1].innerText = "pular pela janela"
+            botoes[1].setAttribute = ("onclick", "escolha('pular')");
+        }
+
+        else if (opcao === 'analisar') {
+            titulo.innerText = "gamer over";
+            imagem.src = "cena 1.2.png";
+            historia.innerText = "você não é um robô de velocidade por isso foi pego pelos guardas."
+            botoes.forEach(botao => botao.style.display = "none");
+        }
+
+        else if (opcao === 'porta') {
+            titulo.innerText = "gamer over";
+            imagem.src = "cena 3.1.png";
+            historia.innerText = " A porta dos fundos é um armário. Fazendo ser pego."
+            botoes.forEach(botao => botao.style.display = "none");
+        }
+
+        else if (opcao === 'velocidade') {
+            titulo.innerText = "gamer over";
+            imagem.src = "cena 4.2.png";
+            historia.innerText = "você não é um robô de velocidade por isso foi pego pelos guardas."
+            botoes.forEach(botao => botao.style.display = "none");
+        }
+
+        else if (opcao === 'lento') {
+            titulo.innerText = "gamer over";
+            imagem.src = "cena 4.2.png";
+            historia.innerText = "você não é um robô de velocidade por isso foi pego pelos guardas."
+            botoes.forEach(botao => botao.style.display = "none");
+        }
+    }
+
+    
+</script>
+</body>
+</html>
