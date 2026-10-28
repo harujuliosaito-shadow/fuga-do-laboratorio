@@ -70,39 +70,33 @@
             titulo.innerText = "fuga";
             imagem.src = "cena1.2.png";
             historia.innerText = "os guardas te encontraram como você vai fugir?."
-            botoes[0].innerText = "saia correndo"
-            botoes[0].setAttribute = ("onclick", "escolha('correr')");
-            botoes[1].innerText = "pular pela janela"
-            botoes[1].setAttribute = ("onclick", "escolha('pular')");
+            botoes[0].innerText = "pular pela janela"
+            botoes[0].setAttribute = ("onclick", "escolha('pular')");
+            botoes[1].innerText = "sair correndo"
+            botoes[1].setAttribute = ("onclick", "escolha('correr')");
         }
 
         else if (opcao === 'analisar') {
             titulo.innerText = "gamer over";
-            imagem.src = "cena 1.2.png";
-            historia.innerText = "você não é um robô de velocidade por isso foi pego pelos guardas."
+            imagem.src = "cena 2.1.png";
+            historia.innerText = "você ficou muito tempo olhando para parede, ai os guardas te capturaram."
             botoes.forEach(botao => botao.style.display = "none");
         }
 
-        else if (opcao === 'porta') {
+        else if (opcao === 'local') {
             titulo.innerText = "gamer over";
-            imagem.src = "cena 3.1.png";
-            historia.innerText = " A porta dos fundos é um armário. Fazendo ser pego."
+            imagem.src = "4.2.png";
+            historia.innerText = " você não é um robô de velocidade por isso foi pego pelos guardas."
             botoes.forEach(botao => botao.style.display = "none");
         }
 
-        else if (opcao === 'velocidade') {
-            titulo.innerText = "gamer over";
-            imagem.src = "cena 4.2.png";
-            historia.innerText = "você não é um robô de velocidade por isso foi pego pelos guardas."
-            botoes.forEach(botao => botao.style.display = "none");
-        }
-
-        else if (opcao === 'lento') {
+        else if (opcao === 'correr') {
             titulo.innerText = "gamer over";
             imagem.src = "cena 4.2.png";
             historia.innerText = "você não é um robô de velocidade por isso foi pego pelos guardas."
             botoes.forEach(botao => botao.style.display = "none");
         }
+    
     }
 
     
