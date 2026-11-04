@@ -62,7 +62,7 @@
             imagem.src = "cena1.1.png";
             historia.innerText = "Você descobri que ali é um laboratório estranho e misterioso…O que você faz?";
             botoes[0].innerText = "analisar a parede";
-            botoes[0].setAttribute = ("onclick", "escolha('analisar')");
+            botoes[0].setAttribute("onclick", "escolha('analisar')");
             botoes[1].innerText = "explorar mais o local";
             botoes[1].setAttribute("onclick", "escolha('local')");
         }
@@ -71,28 +71,28 @@
             imagem.src = "cena1.2.png";
             historia.innerText = "os guardas te encontraram como você vai fugir?."
             botoes[0].innerText = "pular pela janela"
-            botoes[0].setAttribute = ("onclick", "escolha('pular')");
+            botoes[0].setAttribute("onclick", "escolha('pular')");
             botoes[1].innerText = "sair correndo"
-            botoes[1].setAttribute = ("onclick", "escolha('correr')");
+            botoes[1].setAttribute("onclick", "escolha('correr')");
         }
 
         else if (opcao === 'analisar') {
             titulo.innerText = "gamer over";
-            imagem.src = "cena 2.1.png";
+            imagem.src = "cena2.1.png";
             historia.innerText = "você ficou muito tempo olhando para parede, ai os guardas te capturaram."
             botoes.forEach(botao => botao.style.display = "none");
         }
 
-        else if (opcao === 'local') {
+        else if (opcao === 'pular') {
             titulo.innerText = "gamer over";
-            imagem.src = "4.2.png";
+            imagem.src = "4.1.png";
             historia.innerText = " você não é um robô de velocidade por isso foi pego pelos guardas."
             botoes.forEach(botao => botao.style.display = "none");
         }
 
         else if (opcao === 'correr') {
             titulo.innerText = "gamer over";
-            imagem.src = "cena 4.2.png";
+            imagem.src = "4.2.png";
             historia.innerText = "você não é um robô de velocidade por isso foi pego pelos guardas."
             botoes.forEach(botao => botao.style.display = "none");
         }
